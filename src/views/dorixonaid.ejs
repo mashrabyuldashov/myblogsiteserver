@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Home page</title>
+</head>
+<body>
+    <div id="viewport">
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <header>
+            <a href="/pharmacys">DORIXONALAR</a>
+            <button class="modal-click-dori">
+                dori qo'shing
+            </button>
+          </header>
+          <ul class="nav">
+              <% pharmacys.map(e => { %>
+                <li>
+                    <a href="/pharmacys/<%= e.id%>" class="btn-click" id="<%= e.id%>">
+                        <%= e.name %>
+                    </a>
+                </li>
+            <% }) %>
+        </ul>
+    </div>
+    <!-- Content -->
+    <div id="content">
+        <div class="container-fluid">
+            <h1 class="h1_home"><%= pharmacysFound.name%></h1>
+                
+                <div class="wrapper">
+                    <h2><%= pharmacysFound.name %></h2>
+                    
+                    <div class="dori_dev">
+                        
+                        <% pharmacysFound.medicines.map((e, index) => { %>
+                            <div class="dori">
+                                <p><%= index + 1%></p>
+                                <h4><%= e.name%></h4>
+                                <button class="edit_btn_dori" id="<%= e.id%>" data-name-abc="<%= e.name%>">Edit</button>
+                                <button class="delete_btn_dori" id="<%= e.id%>">Delete</button>
+                            </div>
+                        <% }) %>
+
+                    </div>
+
+                </div>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="div-modal">
+        <button class="close-btn-modal">x</button>
+        <h2>Yangi Dori qo'shing brat :)</h2>
+        <form class="form" id="<%= pharmacysFound.id%>">
+            <input name="name" placeholder="iltimos dori nomini kiriting" type="text" required>
+            <button type="submit">Qo'sh</button>
+        </form>
+    </div>
+
+    <script src="/js/dorixonaid.js"></script>
+</body>
+</html>

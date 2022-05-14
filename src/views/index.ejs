@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Home page</title>
+</head>
+<body>
+    <div id="viewport">
+        <!-- Sidebar -->
+        <div id="sidebar">
+          <header>
+            <a href="#">DORIXONALAR</a>
+            <button class="add-kx-btn">
+                Dorixona qo'shish
+            </button>
+          </header>
+          <ul class="nav">
+              <% pharmacys.map(e => { %>
+                <li>
+                    <a href="/pharmacys/<%= e.id%>" class="btn-click">
+                        <%= e.name %>
+                    </a>
+                    <button class="edit_btn" id="<%= e.id%>" data-name-value="<%= e.name%>">
+                        Edit
+                    </button>
+                    <button class="delete_btn" id="<%= e.id%>">
+                        delete
+                    </button>
+                  </li>
+            <% }) %>
+        </ul>
+    </div>
+    <!-- Content -->
+    <div id="content">
+        <div class="container-fluid">
+            <h1 class="h1_home">Hamma DORIXONALAR</h1>
+            <% pharmacys.map(e => { %>
+                
+                <div class="wrapper">
+                    <h2 class="h2_update"><%= e.name %></h2>
+                    
+                    <div class="dori_dev">
+                        
+                        <% e.medicines.map(e => { %>
+                            <div class="dori">
+                                <p><%= e.id%></p>
+                                <h4><%= e.name%></h4>
+                            </div>
+                        <% }) %>
+
+                    </div>
+
+                </div>
+
+            <% }) %>
+        </div>
+    </div>
+    </div>
+
+    <div class="div-modal">
+        <button class="close-btn-modal">x</button>
+        <h2>Yangi Dorixona qo'shing brat :)</h2>
+        <form id="form">
+            <input name="name" placeholder="iltimos dorixona nomini kiriting" type="text" required>
+            <button type="submit">Qo'sh</button>
+        </form>
+    </div>
+
+<script src="/js/index.js"></script>
+
+</body>
+</html>

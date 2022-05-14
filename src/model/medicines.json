@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "dori 1",
+        "pharmacyID": 1
+    },
+    {
+        "id": 2,
+        "name": "dori 2",
+        "pharmacyID": 1
+    },
+    {
+        "id": 3,
+        "name": "dori 3",
+        "pharmacyID": 1
+    },
+    {
+        "id": 4,
+        "name": "dori 4",
+        "pharmacyID": 1
+    },
+    {
+        "id": 5,
+        "name": "dori 5",
+        "pharmacyID": 1
+    },
+    {
+        "id": 11,
+        "name": "dori 1",
+        "pharmacyID": 2
+    },
+    {
+        "id": 12,
+        "name": "dori 2",
+        "pharmacyID": 2
+    },
+    {
+        "id": 13,
+        "name": "dori 3",
+        "pharmacyID": 2
+    },
+    {
+        "id": 14,
+        "name": "dori 4",
+        "pharmacyID": 2
+    },
+    {
+        "id": 15,
+        "name": "dori 5",
+        "pharmacyID": 2
+    },
+    {
+        "id": 21,
+        "name": "dori 1",
+        "pharmacyID": 3
+    },
+    {
+        "id": 22,
+        "name": "dori 2",
+        "pharmacyID": 3
+    }
+]
