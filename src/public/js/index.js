@@ -13,6 +13,7 @@ closeModal.addEventListener("click", () => {
 })
 
 form.addEventListener("submit", (e) => {
+    e.preventDefault();
     fetch('https://proud-decisive-debt.glitch.me/pharmacys', {
         method: "POST",
         headers: {
@@ -22,6 +23,7 @@ form.addEventListener("submit", (e) => {
             name: e.target.name.value
         })
     })
+    
 })
 
 btnNav.addEventListener("click", (e) => {
