@@ -8,7 +8,7 @@ const POST_PHARMACY = (req, res) => {
 
     write('pharmacys.json', pharmacys);
 
-    res.redirect('index');
+    res.redirect('/pharmacys');
 };
 
 module.exports = {

@@ -10,7 +10,7 @@ const MEDICINE_POST = (req, res) => {
 
     write('medicines.json', medicines);
 
-    res.redirect('dorixonaid');
+    res.redirect(`/pharmacys/medicines/${pharmacyID}`)
 }   
 
 module.exports = {
