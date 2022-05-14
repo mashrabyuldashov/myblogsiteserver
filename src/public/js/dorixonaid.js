@@ -13,7 +13,8 @@ closeModal.addEventListener("click", () => {
 })
 
 form.addEventListener("submit", (e) => {
-
+    e.preventDefault();
+    window.location.reload();
     fetch(`https://proud-decisive-debt.glitch.me/pharmacys/medicines/${e.target.id}`, {
         method: "POST",
         headers: {
