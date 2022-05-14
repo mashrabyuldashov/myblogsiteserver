@@ -24,7 +24,6 @@ form.addEventListener("submit", (e) => {
     })
 })
 
-
 doriDev.addEventListener("click", (e) => {
     if (e.target.matches('.edit_btn_dori')) {
         const promtValueDori = prompt("Update qil jiyan", `${e.target.dataset.nameAbc}`)
