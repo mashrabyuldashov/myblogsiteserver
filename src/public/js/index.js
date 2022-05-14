@@ -14,7 +14,7 @@ closeModal.addEventListener("click", () => {
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
-    fetch('http://localhost:5000/pharmacys', {
+    fetch('https://proud-decisive-debt.glitch.me/pharmacys', {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
